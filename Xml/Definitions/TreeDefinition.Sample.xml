@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tree:treeDefinition xmlns:tree="http://www.sdltridion.com/2009/GUI/extensions/Tree">
+	<!-- The `selectornamespaces` element is the container for selection prefix-namespaceURI associations -->
+	<tree:selectornamespaces>
+		<!-- Defines a single prefix-namespaceURI association -->
+		<tree:namespace prefix="tcm" uri="http://www.tridion.com/ContentManager/5.0"/>
+	</tree:selectornamespaces>
+	<tree:nodes>
+		<!-- The `itemSelector` element defines the XPath query executed against the data to retrieve the root for a tree -->
+		<tree:rootSelector>.</tree:rootSelector>
+		<tree:rootUri>tcm:0-0-0</tree:rootUri>
+		<!-- Defines the title of the root entry of the tree -->
+		<tree:rootTitle>Content Management</tree:rootTitle>
+		<!-- Defines the icon of the root entry of the tree -->
+		<tree:rootIcon>ITridion</tree:rootIcon>
+		<!-- The `nodeSelector` element defines the XPath query executed against the data to retrieve a child node of a tree leaf -->
+		<tree:nodeSelector>./tcm:*/tcm:Item</tree:nodeSelector>
+		<!-- The `idSelector` element defines the sub XPath (appended to nodeSelector) query executed against the data to retrieve the ID of a leaf -->
+		<tree:idSelector>@ID</tree:idSelector>
+		<!-- The `titleSelector` element defines the sub XPath (appended to nodeSelector) query executed against the data to retrieve the Title of a leaf -->
+		<tree:titleSelector>@Title</tree:titleSelector>
+		<!-- The `iconSelector` element defines the sub XPath (appended to nodeSelector) query executed against the data to retrieve the Icon of a leaf -->
+		<tree:iconSelector>@Icon</tree:iconSelector>
+		<tree:attributes>
+			<tree:attribute name="IsLoaded" selector="boolean(child::tcm:*)"/>
+			<tree:attribute name="Priority" selector="@Priority"/>
+			<tree:attribute name="CanHaveChildren" selector="not(@HasChildren='false') and not(@Type='8192')"/>
+		</tree:attributes>
+	</tree:nodes>
+	<tree:imagePath>/Images/Icons/</tree:imagePath>
+</tree:treeDefinition>
+
