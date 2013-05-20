@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UIBeardcore.Extensions.Tree")]
+[assembly: AssemblyTitle("UIBeardcore.Extension.Tree")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("SDL")]
-[assembly: AssemblyProduct("UIBeardcore.Extensions.Tree")]
+[assembly: AssemblyProduct("UIBeardcore.Extension.Tree")]
 [assembly: AssemblyCopyright("Copyright © SDL 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
